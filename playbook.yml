@@ -42,7 +42,7 @@
         name: test
     - name: Re-create a MySQL container
       docker_container:
-        name: khalid-mysql
+        name: ndthai-mysql
         image: mysql:8.0
         networks:
           - name: test
@@ -66,12 +66,12 @@
         owner: ubuntu
         group: ubuntu
     - name: SLEEP now !!!
-      shell: sleep 15 && sudo docker exec -i khalid-mysql mysql --user=root --password=password123_DONG < script
+      shell: sleep 15 && sudo docker exec -i ndthai-mysql mysql --user=root --password=password123_DONG < script
 
     - name: Re-create a Spring container
       docker_container:
-        name: khalid-springboot
-        image: khaliddinh/springboot
+        name: ndthai-springboot
+        image: thaind91/springboot
         networks:
           - name: test
             aliases:
