@@ -2,7 +2,7 @@ pipeline {
 
     agent{
         docker {
-            image 'thaind91/ansible'
+            image 'khalid/ansible'
         }
     }
     environment {
