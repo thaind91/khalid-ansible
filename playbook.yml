@@ -71,7 +71,7 @@
     - name: Re-create a Spring container
       docker_container:
         name: ndthai-springboot
-        image: thaind91/springboot
+        image: khalid/springboot
         networks:
           - name: test
             aliases:
